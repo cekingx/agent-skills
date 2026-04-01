@@ -25,7 +25,7 @@ Read the full methodology in [references/agile-methodology.md](references/agile-
 - **Format**: "As a [user type], I want [goal] so that [benefit]"
 - **Estimation**: Use story points (relative sizing), not time-based estimates
 - **Tasks**: High-level implementation categories only (Smart Contract, Backend, Frontend)
-- **Critical**: contains ONLY epics, user stories, and high-level tasks. Detailed technical specs belong in GitLab issues.
+- **Critical**: contains ONLY epics, user stories, and high-level tasks. Detailed technical specs belong in tasks, not here.
 
 ## Generation Process
 
@@ -73,7 +73,7 @@ For each user story, create tasks by technology layer (only if applicable):
 - **Backend Implementation** - If backend/API work needed
 - **Frontend Implementation** - If UI work needed
 
-**Important**: These are just category labels, not detailed work items. Each task will link to multiple detailed GitLab issues.
+**Important**: These are category labels only, not detailed work items. Detailed technical specs belong in the task decomposition step.
 
 ### 5. Estimate Story Points
 
@@ -106,7 +106,7 @@ Always output as a markdown file following the template structure:
    - Priority and story point estimate
    - Acceptance criteria (user-focused)
    - High-level implementation tasks (Smart Contract/Backend/Frontend)
-   - Placeholders for GitLab issue links
+   - Placeholders for task links
 
 ## Smart Contract & Blockchain Context
 

@@ -79,5 +79,5 @@ user-story ──► User stories (what & why)
 task-decomposer ──► Layer tasks with technical specs (how)
     │
     ▼
-Development in GitLab
+Development
 ```
