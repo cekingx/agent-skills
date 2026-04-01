@@ -127,7 +127,7 @@ Before finalizing:
 - [ ] Acceptance criteria are from user perspective (not technical implementation)
 - [ ] Story points are estimated using relative sizing
 - [ ] High-level tasks are implementation categories only (Smart Contract/Backend/Frontend)
-- [ ] No detailed technical specifications in Taiga (those belong in GitLab)
+- [ ] No detailed technical specifications
 - [ ] Epic deadline is noted
 - [ ] Business value is clearly articulated
 - [ ] Priorities are assigned
@@ -144,13 +144,3 @@ Before finalizing:
 - "Implement staking function" (no user perspective)
 - "Create staking API endpoint" (technical task, not user value)
 - "Deploy contract to testnet" (technical task)
-
-## Relationship to GitLab Issues
-
-After creating user stories in Taiga:
-1. Each high-level task (Smart Contract/Backend/Frontend) will be decomposed into detailed GitLab issues
-2. GitLab issues contain the technical specifications (endpoints, contracts, schemas)
-3. GitLab issues link back to the Taiga user story
-4. Taiga shows implementation progress without technical details
-
-**Separation principle**: Stories = what and why (product layer), GitLab = how (technical layer)
