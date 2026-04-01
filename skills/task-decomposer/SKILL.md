@@ -104,9 +104,14 @@ Concrete, actionable checklist items — no time estimates:
 - Testing (unit, integration)
 - Code review and documentation
 
-### 7. Use the Template
+### 7. Use the Template and Examples
 
 Copy structure from [assets/task-decomposer-template.md](assets/task-decomposer-template.md).
+
+Reference examples:
+- [assets/example-smart-contract-task.md](assets/example-smart-contract-task.md)
+- [assets/example-backend-task.md](assets/example-backend-task.md)
+- [assets/example-frontend-task.md](assets/example-frontend-task.md)
 
 ## Output Format
 
