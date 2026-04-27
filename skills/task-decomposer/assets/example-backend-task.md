@@ -114,14 +114,3 @@
 - [ ] Write API integration tests against testnet
 - [ ] Update API documentation
 
----
-
-### Definition of Done
-
-- [ ] Code implemented according to specifications
-- [ ] All tests passing
-- [ ] Code reviewed and approved
-- [ ] Documentation updated
-- [ ] Merged to main branch
-- [ ] Deployed to staging
-- [ ] QA verified

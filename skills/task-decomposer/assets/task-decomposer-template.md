@@ -77,14 +77,3 @@ For existing endpoints being reused, just reference them by method + path withou
 - [ ] [Code review fixes]
 - [ ] [Documentation update]
 
----
-
-### Definition of Done
-
-- [ ] Code implemented according to specifications
-- [ ] All tests passing
-- [ ] Code reviewed and approved
-- [ ] Documentation updated
-- [ ] Merged to main branch
-- [ ] Deployed to staging
-- [ ] QA verified
