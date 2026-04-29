@@ -1,6 +1,6 @@
 ---
 name: user-story
-description: Generate user stories following a customized Agile methodology for smart contract and backend development. Use this skill when the user provides a problem statement, BOD requirement, feature request, or epic and needs it structured into user stories with acceptance criteria and high-level implementation tasks. Triggers include requests like "create user stories for", "break down this epic", "write user stories", or "generate stories".
+description: Generate user stories following a customized Agile methodology for application development. Use this skill when the user provides a problem statement, BOD requirement, feature request, or epic and needs it structured into user stories with acceptance criteria and high-level implementation tasks. Triggers include requests like "create user stories for", "break down this epic", "write user stories", or "generate stories".
 ---
 
 # User Story Generation
@@ -33,7 +33,7 @@ Read the full methodology in [references/agile-methodology.md](references/agile-
 
 - Clarify the epic's objective and deadline
 - Identify the problem being solved or opportunity captured
-- Determine the scope and constraints
+- Determine the scope and constraints — define what is **in scope (Goals)** and what is **out of scope (Non-Goals)**
 - Understand which technology layers are involved (smart contract, backend, frontend)
 
 ### 2. Break Down into User Stories
@@ -106,7 +106,6 @@ Always output as a markdown file following the template structure:
    - Priority and story point estimate
    - Acceptance criteria (user-focused)
    - High-level implementation tasks (Smart Contract/Backend/Frontend)
-   - Placeholders for task links
 
 ## Smart Contract & Blockchain Context
 
@@ -122,6 +121,7 @@ Remember: Focus on **what the user can do**, not how it's implemented technicall
 ## Quality Checklist
 
 Before finalizing:
+- [ ] Epic has Goals (specific outcomes) and Non-Goals (explicit exclusions)
 - [ ] Every user story delivers clear user value
 - [ ] User stories follow "As a..., I want..., So that..." format
 - [ ] Acceptance criteria are from user perspective (not technical implementation)

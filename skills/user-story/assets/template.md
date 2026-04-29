@@ -10,6 +10,16 @@
 
 [The problem this solves or opportunity it captures. Why does this matter to the business/users?]
 
+### Goals
+
+- [What this epic will accomplish — specific, bounded outcomes]
+- [...]
+
+### Non-Goals
+
+- [What is explicitly out of scope for this epic]
+- [...]
+
 ---
 
 ## User Story: [Title]

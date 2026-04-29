@@ -8,6 +8,19 @@ Build a comprehensive token staking platform that allows users to stake their to
 
 Staking mechanisms increase token utility and encourage long-term holding, reducing sell pressure and creating a more stable token economy. This addresses the BOD's strategic goal of building sustainable tokenomics and increasing community engagement.
 
+### Goals
+
+- Users can stake, view rewards, claim rewards, and unstake tokens
+- Rewards accrue automatically and are visible in real-time
+- Staking activity is recorded and viewable as history
+
+### Non-Goals
+
+- Governance voting or delegation (separate epic)
+- Cross-chain staking or bridging
+- Liquid staking tokens (e.g., stToken derivatives)
+- Admin tools for adjusting reward rates
+
 ---
 
 ## User Story 1: Stake Tokens

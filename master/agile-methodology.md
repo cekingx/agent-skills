@@ -20,6 +20,7 @@ To bring structure and manageability to top-down product requirements while main
 - Too large to complete in a single sprint
 - Has an associated deadline from BOD
 - Represents a significant product feature or capability
+- Has explicit **Goals** (what it will deliver) and **Non-Goals** (what is out of scope)
 
 **Example:**
 
@@ -125,6 +126,7 @@ To bring structure and manageability to top-down product requirements while main
 
 3. **Create PRD**
    - Document epics and user stories in the PRD
+   - Include Goals and Non-Goals at the epic level to prevent scope creep
    - Include acceptance criteria from user perspective
    - Add high-level technical context (but not detailed specs)
    - Stop here — do NOT include detailed implementation tasks in the PRD
