@@ -1,12 +1,12 @@
 # cekingx-agent-skills
 
-A collection of custom agent skills for Claude Code, tailored for smart contract and blockchain development workflows.
+A collection of custom agent skills for cekingx application development workflows.
 
 ## Skills
 
 ### user-story
 
-Generates user stories following a customized Agile methodology for smart contract and backend development.
+Generates user stories following a customized Agile methodology for backend, frontend, and smart contract development.
 
 **Triggers:** "create user stories for", "break down this epic", "write user stories", "generate stories"
 
@@ -40,9 +40,32 @@ Decomposes user stories into layer-specific implementation tasks with enough tec
 
 ---
 
+### technical-architect
+
+Generates a comprehensive technical architecture document (`docs/technical-architecture.md`) from project context.
+
+**Triggers:** "document my architecture", "write an architecture doc", "create a system design document", "generate technical docs"
+
+**Input:** Project name, language/framework, modules, data stores, external integrations
+
+**Output:** A single `docs/technical-architecture.md` covering:
+- Executive summary, goals & constraints
+- System overview (Mermaid flowchart)
+- Component breakdown, domain model, data architecture
+- Key architectural decisions, security, observability
+- Error handling and testing conventions
+- Project structure appendix
+
+**Key principle:** Decisions over descriptions — always explains *why* a technology was chosen, not just *what* it is.
+
+---
+
 ## Structure
 
 ```
+master/
+└── agile-methodology.md                     # Shared methodology reference
+
 skills/
 ├── user-story/
 │   ├── SKILL.md                              # Skill definition and generation process
@@ -52,20 +75,25 @@ skills/
 │   └── references/
 │       └── agile-methodology.md             # Full methodology reference
 │
-└── task-decomposer/
-    ├── SKILL.md                              # Skill definition and decomposition process
-    ├── assets/
-    │   ├── task-decomposer-template.md       # Output template
-    │   ├── example-smart-contract-task.md   # Example: Smart Contract layer
-    │   ├── example-backend-task.md          # Example: Backend layer
-    │   └── example-frontend-task.md         # Example: Frontend layer
+├── task-decomposer/
+│   ├── SKILL.md                              # Skill definition and decomposition process
+│   ├── assets/
+│   │   ├── task-decomposer-template.md       # Output template
+│   │   ├── example-smart-contract-task.md   # Example: Smart Contract layer
+│   │   ├── example-backend-task.md          # Example: Backend layer
+│   │   └── example-frontend-task.md         # Example: Frontend layer
+│   └── references/
+│       └── agile-methodology.md             # Full methodology reference
+│
+└── technical-architect/
+    ├── SKILL.md                              # Skill definition and generation process
     └── references/
-        └── agile-methodology.md             # Full methodology reference
+        └── section-guide.md                 # Detailed writing guidance per section
 ```
 
 ## Usage
 
-Skills are invoked automatically by Claude Code when your request matches the trigger conditions, or explicitly via `/user-story` or `/task-decomposer`.
+Skills are invoked automatically by Claude Code when your request matches the trigger conditions, or explicitly via `/user-story`, `/task-decomposer`, or `/technical-architect`.
 
 ## Workflow
 
@@ -80,4 +108,6 @@ task-decomposer ──► Layer tasks with technical specs (how)
     │
     ▼
 Development
+
+technical-architect ──► docs/technical-architecture.md (system design)
 ```
