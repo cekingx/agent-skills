@@ -42,13 +42,14 @@ See `references/section-guide.md` for detailed instructions on each section.
 2. **Goals & Constraints** — functional requirements, non-functional requirements, hard constraints
 3. **System Overview** — one Mermaid `flowchart TD` diagram showing major components and data flow
 4. **Component Breakdown** — one subsection per major component; responsibility + interface, no internal implementation detail
-5. **Data Architecture** — core entities (plain text schema), storage technology choices with rationale, data flow narrative
-6. **Key Architectural Decisions** — table of significant technology choices with rationale summaries
-7. **Security & Compliance** *(skip if user says not relevant)* — auth/authz model, secrets, transport, compliance notes
-8. **Observability** *(skip if user says not relevant)* — logging, metrics, tracing, alerting; state *what* is monitored, not just that it is
-9. **Error Handling Conventions** *(include if user has a convention; ask if unsure)* — the pattern services use, with short code examples in the project's language
-10. **Testing Expectations** *(include if user has a convention; ask if unsure)* — what gets unit tested, what does not, setup pattern with short example
-11. **Appendix: Project Structure** — directory tree of `src/` with inline comments
+5. **Domain Model** — core business entities, their relationships, and key invariants; one Mermaid `erDiagram`, no storage details
+6. **Data Architecture** — core entities (plain text schema), storage technology choices with rationale, data flow narrative
+7. **Key Architectural Decisions** — table of significant technology choices with rationale summaries
+8. **Security & Compliance** *(skip if user says not relevant)* — auth/authz model, secrets, transport, compliance notes
+9. **Observability** *(skip if user says not relevant)* — logging, metrics, tracing, alerting; state *what* is monitored, not just that it is
+10. **Error Handling Conventions** *(include if user has a convention; ask if unsure)* — the pattern services use, with short code examples in the project's language
+11. **Testing Expectations** *(include if user has a convention; ask if unsure)* — what gets unit tested, what does not, setup pattern with short example
+12. **Appendix: Project Structure** — directory tree of `src/` with inline comments
 
 ---
 
@@ -64,14 +65,14 @@ Example skeleton:
 ```
 flowchart TD
     subgraph Clients
-        WEB[Web App]
-        MOB[Mobile App]
+        WEB["Web App"]
+        MOB["Mobile App"]
     end
 
-    subgraph YourApp [Your Application]
+    subgraph YourApp ["Your Application"]
         MW["Middleware\nAuth · Logging"]
-        MOD_A[Module A]
-        MOD_B[Module B]
+        MOD_A["Module A]
+        MOD_B["Module B"]
     end
 
     DB[(Primary DB)]
@@ -92,7 +93,7 @@ flowchart TD
 Always produce this file:
 
 ```
-architecture.md          ← main document
+docs/technical-architecture.md          ← main document
 ```
 
 Present the file with `present_files` at the end so the user can download it.
@@ -105,7 +106,7 @@ Present the file with `present_files` at the end so the user can download it.
 - **No implementation detail** in the architecture doc. Code belongs in code; the doc describes shape, not internals.
 - **Diagrams over prose** for system topology. One good Mermaid diagram replaces three paragraphs.
 - **Placeholder over invention.** If a detail is unknown, write `[TO BE DEFINED]` rather than guessing.
-- **Living document footer.** End `architecture.md` with: *"This document should be reviewed and updated on any major architectural change."*
+- **Living document footer.** End `technical-architecture.md` with: *"This document should be reviewed and updated on any major architectural change."*
 - **Prose in sections, not bullets.** Write paragraphs inside sections. Use bullet lists only for requirement lists and rule lists.
 - **No framework-specific jargon** in section headings — headings like "Component Breakdown" and "Data Architecture" apply to any stack.
 - Code examples in Error Handling and Testing sections should use the project's **actual** language and framework.

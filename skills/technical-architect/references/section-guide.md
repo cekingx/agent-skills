@@ -79,7 +79,34 @@ Do not describe how a component works internally. "The auth module issues JWTs" 
 
 ---
 
-## 5. Data Architecture
+## 5. Domain Model
+
+One Mermaid `erDiagram` followed by two subsections.
+
+The diagram must show the core business entities and their named relationships. Use cardinality notation (`||--o{`, `}o--||`, etc.). Include only entities that represent meaningful domain concepts — omit junction tables, audit tables, and infrastructure entities.
+
+Example skeleton:
+```
+erDiagram
+    ORDER ||--o{ ORDER_ITEM : contains
+    ORDER }o--|| CUSTOMER : "placed by"
+    PRODUCT ||--o{ ORDER_ITEM : "referenced in"
+    PRODUCT }o--|| CATEGORY : "belongs to"
+```
+
+**Relationships** — a short prose paragraph naming each significant relationship and its cardinality. Explain any relationship whose direction or cardinality is non-obvious.
+
+**Business Rules & Invariants** — a bullet list of 3–8 rules that the domain enforces, stated as declarative facts about the entities above. These are constraints the application must uphold regardless of the caller.
+
+- Write rules in domain language, not code: "An Order must have at least one OrderItem" not "order.items.length > 0".
+- Include only rules that a developer would not guess from the entity names alone.
+- Omit CRUD rules (e.g. "Orders can be created") — those are implied.
+
+Do not describe storage here. The Data Architecture section covers how these entities are persisted.
+
+---
+
+## 6. Data Architecture
 
 Three subsections:
 
@@ -104,7 +131,7 @@ If there is no cache, no queue, no object storage — omit those paragraphs. Do 
 
 ---
 
-## 6. Key Architectural Decisions
+## 7. Key Architectural Decisions
 
 A table summarizing significant technology choices and architectural decisions with brief rationale.
 
@@ -119,7 +146,7 @@ Every row must name a real decision made for this project. Do not add generic pl
 
 ---
 
-## 7. Security & Compliance
+## 8. Security & Compliance
 
 Cover these topics with one paragraph each (omit topics that are not applicable):
 
@@ -134,7 +161,7 @@ This section describes the model, not the implementation. "JWT with RS256" is th
 
 ---
 
-## 8. Observability
+## 9. Observability
 
 Four topics, each one paragraph:
 
@@ -150,7 +177,7 @@ End with a sentence naming the 1–2 most operationally important signals for th
 
 ---
 
-## 9. Error Handling Conventions
+## 10. Error Handling Conventions
 
 Only include this section if the team has an explicit convention. If unsure, ask the user before writing.
 
@@ -166,7 +193,7 @@ Do not invent a pattern. If the user has not defined one, skip this section or u
 
 ---
 
-## 10. Testing Expectations
+## 11. Testing Expectations
 
 Only include this section if the team has explicit conventions. If unsure, ask the user before writing.
 
@@ -181,7 +208,7 @@ Do not write exhaustive test suites. Show the pattern, not every case.
 
 ---
 
-## 11. Appendix: Project Structure
+## 12. Appendix: Project Structure
 
 A directory tree of the source directory with inline `#` comments on non-obvious directories and files. Show 2–3 levels deep. Omit `node_modules`, build artifacts, and lock files.
 
