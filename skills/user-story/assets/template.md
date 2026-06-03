@@ -44,13 +44,3 @@
 ### Notes
 
 [Any additional context, dependencies, or clarifications needed]
-
----
-
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received

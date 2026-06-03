@@ -53,16 +53,6 @@ Staking mechanisms increase token utility and encourage long-term holding, reduc
 
 ---
 
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received
-
----
-
 ## User Story 2: View Staking Rewards
 
 **As a** staker
@@ -87,16 +77,6 @@ Staking mechanisms increase token utility and encourage long-term holding, reduc
 
 - Rewards should update every block or at reasonable intervals
 - Consider showing historical rewards chart
-
----
-
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received
 
 ---
 
@@ -125,16 +105,6 @@ Staking mechanisms increase token utility and encourage long-term holding, reduc
 
 - Ensure claiming doesn't affect staking status
 - Consider claim cooldown period if needed for tokenomics
-
----
-
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received
 
 ---
 
@@ -167,16 +137,6 @@ Staking mechanisms increase token utility and encourage long-term holding, reduc
 
 ---
 
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received
-
----
-
 ## User Story 5: View Staking History
 
 **As a** staker
@@ -201,12 +161,3 @@ Staking mechanisms increase token utility and encourage long-term holding, reduc
 - No smart contract work needed - data comes from event logs
 - Consider pagination for users with many transactions
 
----
-
-### Definition of Done
-
-- [ ] All related implementation tasks completed
-- [ ] All acceptance criteria met
-- [ ] Code reviewed and merged
-- [ ] Tested in staging environment
-- [ ] Stakeholder sign-off received
